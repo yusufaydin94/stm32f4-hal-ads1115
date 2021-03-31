@@ -32,6 +32,6 @@ float Read_Ads1115(void)
 	data = (buffer[0] << 8) + buffer[1];
 	if(data == 0xFFFF) data = 0;
 	
-	return data;
+	return (float)(0.125 * (float)data);
 }
 
